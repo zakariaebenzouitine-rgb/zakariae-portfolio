@@ -183,10 +183,14 @@ export default function Portfolio() {
                 Building intelligent systems with clarity, precision, and impact.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
-                <button className="px-8 py-4 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-lg font-semibold hover:shadow-lg hover:shadow-blue-500/50 transition-all duration-300 flex items-center justify-center gap-2">
+                <a
+                  href="/Benzouitine_resume.pdf"
+                  download="Zakariae_Benzouitine_CV.pdf"
+                  className="px-8 py-4 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-lg font-semibold hover:shadow-lg hover:shadow-blue-500/50 transition-all duration-300 flex items-center justify-center gap-2"
+                >
                   <Download size={20} />
                   Download CV
-                </button>
+                </a>
                 <button 
                   onClick={() => scrollToSection('contact')}
                   className={`px-8 py-4 rounded-lg font-semibold border-2 transition-all duration-300 ${darkMode ? 'border-gray-700 hover:border-blue-500 hover:bg-gray-800' : 'border-gray-300 hover:border-blue-500 hover:bg-gray-100'}`}
