@@ -202,7 +202,7 @@ export default function Portfolio() {
                 <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-2xl blur-2xl opacity-20 animate-pulse"></div>
                 <img
                   src="/profile_picture.jpg"
-                  alt="Zakaria Benzouitine"
+                  alt="Zakariae Benzouitine"
                   className="relative w-64 h-64 md:w-80 md:h-80 rounded-2xl object-cover border-4 border-blue-500/20 shadow-2xl"
                 />
               </div>
@@ -234,7 +234,7 @@ export default function Portfolio() {
             <div className="grid md:grid-cols-2 gap-6 mt-8">
               <div className={`p-6 rounded-xl ${darkMode ? 'bg-gray-900/50 border border-gray-800' : 'bg-gray-50 border border-gray-200'}`}>
                 <h3 className="text-xl font-semibold mb-4 bg-gradient-to-r from-blue-500 to-cyan-500 bg-clip-text text-transparent">
-                  🚀 2025 High-Demand Expertise
+                  🚀 Expertise
                 </h3>
                 <ul className={`space-y-3 ${darkMode ? 'text-gray-300' : 'text-gray-700'}`}>
                   <li className="flex items-start gap-2">
@@ -732,14 +732,14 @@ export default function Portfolio() {
             </p>
             <div className="flex flex-wrap justify-center gap-6">
               <a
-                href="mailto:zakaria.benzouitine@example.com"
+                href="zakariaebenzouitine@gmail.com"
                 className={`flex items-center gap-3 px-6 py-3 rounded-lg ${darkMode ? 'bg-gray-900 hover:bg-gray-700' : 'bg-gray-100 hover:bg-gray-200'} transition-all`}
               >
                 <Mail size={20} />
                 <span>Email Me</span>
               </a>
               <a
-                href="https://github.com/yourusername"
+                href="https://github.com/zakariaebenzouitine-rgb"
                 target="_blank"
                 rel="noopener noreferrer"
                 className={`flex items-center gap-3 px-6 py-3 rounded-lg ${darkMode ? 'bg-gray-900 hover:bg-gray-700' : 'bg-gray-100 hover:bg-gray-200'} transition-all`}
@@ -748,7 +748,7 @@ export default function Portfolio() {
                 <span>GitHub</span>
               </a>
               <a
-                href="https://linkedin.com/in/yourusername"
+                href="https://www.linkedin.com/in/zakariaebenzouitine/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className={`flex items-center gap-3 px-6 py-3 rounded-lg ${darkMode ? 'bg-gray-900 hover:bg-gray-700' : 'bg-gray-100 hover:bg-gray-200'} transition-all`}
@@ -765,7 +765,7 @@ export default function Portfolio() {
       <footer className={`py-8 px-6 border-t ${darkMode ? 'border-gray-800 bg-gray-900' : 'border-gray-200 bg-white'}`}>
         <div className="max-w-7xl mx-auto text-center">
           <p className={darkMode ? 'text-gray-400' : 'text-gray-600'}>
-            © 2024 Zakaria Benzouitine. All rights reserved.
+            © 2025 Zakariae Benzouitine. All rights reserved.
           </p>
         </div>
       </footer>
