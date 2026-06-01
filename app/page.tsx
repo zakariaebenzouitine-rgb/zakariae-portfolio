@@ -1,7 +1,7 @@
 // @ts-nocheck
 "use client"
 import React, { useState, useEffect } from 'react';
-import { Download, Mail, Github, Linkedin, ExternalLink, Menu, X, ChevronDown, ArrowRight } from 'lucide-react';
+import { Download, Mail, Github, Linkedin, ExternalLink, Menu, X, ChevronDown, ArrowRight, FileText } from 'lucide-react';
 
 // ─── Skills data ──────────────────────────────────────────────────────────────
 
@@ -99,12 +99,13 @@ const projects = [
     glow: "hover:shadow-orange-500/20",
   },
   {
-    title: "Machine Learning Notebooks",
+    title: "Advancing Climate Resilience in Morocco through AI",
     description:
-      "Hands-on study collection covering core ML algorithms: Linear & Logistic Regression, Decision Trees, Ensemble Methods (Bagging, Random Forests, Boosting), and hyperparameter tuning with GridSearchCV — built while learning ML fundamentals.",
-    tags: ["Scikit-learn", "Python", "Jupyter", "Ensemble Methods"],
-    github: "https://github.com/zakariaebenzouitine-rgb/Machinelearning_notebooks",
-    nda: false,
+      "First-author systematic review of 80 peer-reviewed Q1 studies (2020–2025) on AI, machine learning, and deep learning for climate adaptation and mitigation across seven climate-sensitive sectors in Morocco — mapping techniques, datasets, evaluation metrics, and open research gaps.",
+    tags: ["Systematic Review", "Climate AI", "Survey", "First Author"],
+    github: null,
+    publication: true,
+    venue: "Co-authored with UM6P & Cardiff Met University",
     gradient: "from-indigo-500 via-blue-500 to-sky-500",
     glow: "hover:shadow-indigo-500/20",
   },
@@ -525,6 +526,12 @@ export default function Portfolio() {
                         )}
                       </div>
                     )}
+                    {p.publication && (
+                      <span className="flex-shrink-0 inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-[10px] font-semibold bg-indigo-500/15 border border-indigo-500/30 text-indigo-300">
+                        <FileText size={10} />
+                        Publication
+                      </span>
+                    )}
                   </div>
                   <p className="text-slate-400 text-sm leading-relaxed mb-5 flex-1">{p.description}</p>
                   <div className="flex flex-wrap gap-1.5 mb-5">
@@ -548,11 +555,29 @@ export default function Portfolio() {
                       <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
                       Proprietary · NDA
                     </span>
+                  ) : p.publication ? (
+                    <span className="inline-flex items-center gap-1.5 text-xs text-slate-500 italic">
+                      {p.venue}
+                    </span>
                   ) : null}
                 </div>
               </div>
             ))}
           </div>
+
+          {/* light footnote — back to basics */}
+          <p className="text-center text-slate-600 text-xs mt-10">
+            And every now and then, going back to the basics —{" "}
+            <a
+              href="https://github.com/zakariaebenzouitine-rgb/Machinelearning_notebooks"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-slate-500 hover:text-slate-300 underline underline-offset-2 transition-colors"
+            >
+              my machine learning notebooks
+            </a>{" "}
+            from when I was learning the fundamentals.
+          </p>
         </div>
       </section>
 
@@ -697,12 +722,20 @@ export default function Portfolio() {
         <div className="max-w-xl mx-auto text-center">
           <Label>Contact</Label>
           <h2 className="text-4xl md:text-5xl font-black mb-4">Let's Build Something</h2>
-          <p className="text-slate-500 mb-12 text-sm leading-relaxed">
+          <p className="text-slate-500 mb-10 text-sm leading-relaxed">
             Open to full-time roles, freelance GenAI projects, and research collaborations.
-            I respond to every message.
           </p>
 
           <div className="glass-card rounded-2xl p-8">
+            <p className="text-slate-400 text-sm mb-1">Reach me directly at</p>
+            <a
+              href="mailto:zakariaebenzouitine@gmail.com"
+              className="inline-block text-lg md:text-xl font-semibold bg-gradient-to-r from-violet-400 to-cyan-400 bg-clip-text text-transparent hover:opacity-80 transition-opacity mb-2"
+            >
+              zakariaebenzouitine@gmail.com
+            </a>
+            <p className="text-slate-600 text-xs mb-7">I read every message and reply within 24 hours.</p>
+
             <div className="flex flex-col sm:flex-row gap-3 justify-center">
               <a
                 href="mailto:zakariaebenzouitine@gmail.com"
