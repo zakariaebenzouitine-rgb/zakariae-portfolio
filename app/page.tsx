@@ -45,12 +45,13 @@ const skills2 = [
 
 const projects = [
   {
-    title: "Production RAG Pipeline — DecisiveAI",
+    title: "Production RAG Pipeline",
     description:
-      "Confidential commercial product. A fault-tolerant, resumable multi-block document processing pipeline: OCR via Mistral AI, LLM-powered classification and structured extraction using Gemini 2.5 Flash, query-answer pair generation with automatic anonymisation, and pair-quality scoring — all backed by Google Cloud Storage. Built with Python 3.12, Pydantic data models, and a Typer CLI that supports parallel workers and date-range sharding.",
+      "Confidential commercial product. A fault-tolerant, resumable multi-block document processing pipeline: OCR via Mistral AI, LLM-powered classification and structured extraction with Gemini 2.5 Flash, query-answer pair generation with automatic anonymisation, and pair-quality scoring — all backed by Google Cloud Storage. Built with Python 3.12, Pydantic, and a Typer CLI supporting parallel workers and date-range sharding.",
     tags: ["Gemini 2.5 Flash", "Mistral OCR", "GCS", "PyMuPDF", "Pydantic", "Python 3.12"],
     github: null,
     current: true,
+    currentNote: "UI layer in progress",
     nda: true,
     gradient: "from-violet-500 via-purple-500 to-fuchsia-500",
     glow: "hover:shadow-violet-500/20",
@@ -58,13 +59,24 @@ const projects = [
   {
     title: "AI-Powered Presentation Builder",
     description:
-      "Multi-agent system where specialized agents collaborate end-to-end: a researcher gathers information, a verifier fact-checks every claim, a planner designs the slide structure using the Gemini API, and a builder agent generates and iteratively self-corrects each slide — verifying content accuracy and layout until quality standards are met.",
+      "Multi-agent system where specialized agents collaborate end-to-end: a researcher gathers information on the topic, a planner designs the slide structure via the Gemini API, and a builder agent generates each slide then iteratively self-corrects layout until quality standards are met.",
     tags: ["AI Agents", "Gemini API", "LangGraph", "Multi-Agent", "Python"],
     github: null,
     current: true,
+    currentNote: "Inter-agent verification layer in progress",
     nda: false,
     gradient: "from-emerald-500 via-green-500 to-teal-500",
     glow: "hover:shadow-emerald-500/20",
+  },
+  {
+    title: "XPLAIN — Explainable X-ray Report Generator",
+    description:
+      "Vision Transformer + LLM pipeline generating structured radiology reports with Grad-CAM heatmaps for visual explainability. Bridges medical imaging and natural language generation for interpretable AI in radiology.",
+    tags: ["Vision Transformer", "Grad-CAM", "PyTorch", "Medical AI"],
+    github: "https://github.com/zakariaebenzouitine-rgb/xplain",
+    nda: false,
+    gradient: "from-pink-500 via-rose-500 to-red-500",
+    glow: "hover:shadow-pink-500/20",
   },
   {
     title: "Medical Imaging Analysis System",
@@ -77,23 +89,12 @@ const projects = [
     glow: "hover:shadow-cyan-500/20",
   },
   {
-    title: "XPLAIN — Explainable X-ray Report Generator",
+    title: "Extreme Precipitation Regionalization — Morocco",
     description:
-      "Vision Transformer + LLM pipeline generating structured radiology reports with Grad-CAM heatmaps for visual explainability. Bridges medical imaging and language generation for interpretable AI in radiology.",
-    tags: ["Vision Transformer", "Grad-CAM", "PyTorch", "Medical AI"],
-    github: "https://github.com/zakariaebenzouitine-rgb/xplain",
-    nda: false,
-    gradient: "from-pink-500 via-rose-500 to-red-500",
-    glow: "hover:shadow-pink-500/20",
-  },
-  {
-    title: "Extreme Precipitation Clustering — Morocco",
-    description:
-      "Applied hierarchical clustering to segment Morocco into climatically coherent regions based on extreme precipitation events, enriched with additional meteorological and geographic features to capture climate complexity beyond rainfall patterns alone.",
-    tags: ["Hierarchical Clustering", "Climate Data", "Scikit-learn", "GeoPandas", "Python"],
+      "Climate science study segmenting Morocco into 6 homogeneous regions based on annual block maxima of extreme precipitation (ERA5, 1979–2021). Uses F-madogram distance (a tail-dependence measure), Ward-linkage hierarchical clustering, and a Spatial Coherence Test for validation. Goes beyond precipitation-only by jointly clustering on IVT (Integrated Vapour Transport), Z500 geopotential height, and MSLP — capturing the full atmospheric signature of extreme events.",
+    tags: ["F-madogram", "ERA5", "xarray", "scipy", "GeoPandas", "cartopy"],
     github: null,
     nda: false,
-    research: true,
     gradient: "from-orange-500 via-amber-500 to-yellow-500",
     glow: "hover:shadow-orange-500/20",
   },
@@ -512,10 +513,15 @@ export default function Portfolio() {
                   <div className="flex items-start justify-between gap-2 mb-3">
                     <h3 className="font-bold text-white text-base leading-snug">{p.title}</h3>
                     {p.current && (
-                      <span className="flex-shrink-0 inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-[10px] font-semibold bg-emerald-500/15 border border-emerald-500/30 text-emerald-300">
-                        <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
-                        Shipping Soon
-                      </span>
+                      <div className="flex flex-col items-end gap-1 flex-shrink-0">
+                        <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-[10px] font-semibold bg-emerald-500/15 border border-emerald-500/30 text-emerald-300">
+                          <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
+                          Shipping Soon
+                        </span>
+                        {p.currentNote && (
+                          <span className="text-[10px] text-slate-500 italic text-right">{p.currentNote}</span>
+                        )}
+                      </div>
                     )}
                   </div>
                   <p className="text-slate-400 text-sm leading-relaxed mb-5 flex-1">{p.description}</p>
@@ -539,11 +545,6 @@ export default function Portfolio() {
                     <span className="inline-flex items-center gap-1.5 text-xs px-2.5 py-1 rounded-md bg-amber-500/8 border border-amber-500/20 text-amber-400/70">
                       <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
                       Proprietary · NDA
-                    </span>
-                  ) : p.research ? (
-                    <span className="inline-flex items-center gap-1.5 text-xs px-2.5 py-1 rounded-md bg-sky-500/8 border border-sky-500/20 text-sky-400/70">
-                      <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
-                      Research project · no public repo
                     </span>
                   ) : null}
                 </div>
