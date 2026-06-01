@@ -105,7 +105,6 @@ const projects = [
     tags: ["Systematic Review", "Climate AI", "Survey", "First Author"],
     github: null,
     publication: true,
-    venue: "Co-authored with UM6P & Cardiff Met University",
     gradient: "from-indigo-500 via-blue-500 to-sky-500",
     glow: "hover:shadow-indigo-500/20",
   },
@@ -555,24 +554,20 @@ export default function Portfolio() {
                       <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
                       Proprietary · NDA
                     </span>
-                  ) : p.publication ? (
-                    <span className="inline-flex items-center gap-1.5 text-xs text-slate-500 italic">
-                      {p.venue}
-                    </span>
                   ) : null}
                 </div>
               </div>
             ))}
           </div>
 
-          {/* light footnote — back to basics */}
-          <p className="text-center text-slate-600 text-xs mt-10">
+          {/* footnote — back to basics */}
+          <p className="text-center text-slate-400 text-base md:text-lg mt-12">
             And every now and then, going back to the basics —{" "}
             <a
               href="https://github.com/zakariaebenzouitine-rgb/Machinelearning_notebooks"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-slate-500 hover:text-slate-300 underline underline-offset-2 transition-colors"
+              className="font-semibold bg-gradient-to-r from-violet-400 to-cyan-400 bg-clip-text text-transparent hover:opacity-80 underline underline-offset-4 decoration-violet-500/40 transition-opacity"
             >
               my machine learning notebooks
             </a>{" "}
@@ -721,7 +716,7 @@ export default function Portfolio() {
       <section id="contact" className="relative z-10 py-28 px-6">
         <div className="max-w-xl mx-auto text-center">
           <Label>Contact</Label>
-          <h2 className="text-4xl md:text-5xl font-black mb-4">Let's Build Something</h2>
+          <h2 className="text-4xl md:text-5xl font-black mb-4">Have a Problem Worth Solving?</h2>
           <p className="text-slate-500 mb-10 text-sm leading-relaxed">
             Open to full-time roles, freelance GenAI projects, and research collaborations.
           </p>
