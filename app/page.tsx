@@ -413,7 +413,7 @@ export default function Portfolio() {
           <Label>About Me</Label>
           <h2 className="text-4xl md:text-5xl font-black mb-14">Who I Am</h2>
 
-          <div className="grid md:grid-cols-5 gap-10 items-start">
+          <div className="grid md:grid-cols-5 gap-10 items-center">
 
             {/* bio */}
             <div className="md:col-span-3 space-y-5">
@@ -458,12 +458,12 @@ export default function Portfolio() {
 
             {/* stats + photo */}
             <div className="md:col-span-2 flex flex-col items-center gap-6">
-              <div className="relative">
-                <div className="absolute -inset-1 rounded-2xl bg-gradient-to-br from-violet-500/40 to-cyan-500/40 blur-xl" />
+              <div className="relative w-full">
+                <div className="absolute -inset-2 rounded-2xl bg-gradient-to-br from-violet-500/40 to-cyan-500/40 blur-xl" />
                 <img
                   src="/profile_linkedin.jpeg"
                   alt="Zakariae Benzouitine"
-                  className="relative w-44 h-44 md:w-52 md:h-52 rounded-2xl object-cover border border-white/10"
+                  className="relative w-full h-80 md:h-96 rounded-2xl object-cover object-top border border-white/10"
                 />
               </div>
 
