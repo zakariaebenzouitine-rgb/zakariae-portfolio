@@ -197,43 +197,51 @@ const education = [
 ];
 
 // ─── Medium articles ──────────────────────────────────────────────────────────
-// TODO: replace with your real article data (title, url, cover image, read time)
+
+const MEDIUM_PROFILE = "https://medium.com/@AI_with_Zakariae";
 
 const articles = [
   {
-    title: "Building Explainable AI for Medical Imaging with Grad-CAM",
-    url: "https://medium.com/@zakariaebenzouitine",
-    cover: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=600&h=340&fit=crop",
-    readTime: "7 min",
-    tag: "Computer Vision",
+    title: "Natural Language Processing: NLP",
+    url: "https://medium.com/@AI_with_Zakariae/natural-language-processing-nlp-a947c8bb4709",
+    cover: "https://miro.medium.com/v2/resize:fit:1200/0*GnBacoK2IKcvb_63.png",
+    date: "Nov 27, 2024",
+    tag: "NLP",
   },
   {
-    title: "RAG Systems in Production: What Nobody Tells You",
-    url: "https://medium.com/@zakariaebenzouitine",
-    cover: "https://images.unsplash.com/photo-1677442135703-1787eea5ce01?w=600&h=340&fit=crop",
-    readTime: "9 min",
-    tag: "RAG",
+    title: "Residual Networks (ResNet)",
+    url: "https://medium.com/@AI_with_Zakariae/residual-networks-resnet-184a32a26a86",
+    cover: "https://miro.medium.com/v2/da:true/resize:fit:1024/0*ZYVc0I3163MMyAT8",
+    date: "Nov 10, 2024",
+    tag: "Deep Learning",
   },
   {
-    title: "LangGraph vs CrewAI: Choosing the Right Agent Framework",
-    url: "https://medium.com/@zakariaebenzouitine",
-    cover: "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?w=600&h=340&fit=crop",
-    readTime: "6 min",
-    tag: "AI Agents",
+    title: "Accelerating Deep Learning: The Power of Batch Normalization",
+    url: "https://medium.com/@AI_with_Zakariae/accelerating-deep-learning-the-power-of-batch-normalization-c544e5b723fa",
+    cover: "https://miro.medium.com/v2/resize:fit:1024/0*cM9eaW45ifE62zdJ.png",
+    date: "Oct 2024",
+    tag: "Optimization",
   },
   {
-    title: "Fine-tuning LLMs with QLoRA: A Practical Walkthrough",
-    url: "https://medium.com/@zakariaebenzouitine",
-    cover: "https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?w=600&h=340&fit=crop",
-    readTime: "11 min",
-    tag: "LLMs",
+    title: "Builder's Guide to PyTorch: Parameter Management & Initialization",
+    url: "https://medium.com/@AI_with_Zakariae/builders-guide-to-pytorch-parameter-management-and-parameter-initialization-4677dff80f95",
+    cover: "https://miro.medium.com/v2/resize:fit:1152/1*SwGhVSMvfuyCCi3zVGhMdA.jpeg",
+    date: "Sep 9, 2024",
+    tag: "PyTorch",
   },
   {
-    title: "Hierarchical Clustering for Climate Data: Morocco Case Study",
-    url: "https://medium.com/@zakariaebenzouitine",
-    cover: "https://images.unsplash.com/photo-1534088568595-a066f410bcda?w=600&h=340&fit=crop",
-    readTime: "8 min",
-    tag: "Data Science",
+    title: "Forward & Backward Propagation",
+    url: "https://medium.com/@AI_with_Zakariae/forward-backward-propagation-47daca80a12c",
+    cover: "https://miro.medium.com/v2/resize:fit:749/1*dkK03pEglqZUA8IhB6SuXw.png",
+    date: "Aug 26, 2024",
+    tag: "Neural Networks",
+  },
+  {
+    title: "Multilayer Perceptrons",
+    url: "https://medium.com/@AI_with_Zakariae/multilayer-perceptrons-8ba658a9fab5",
+    cover: "https://miro.medium.com/v2/resize:fit:522/1*2ASulrnv0P4iZUnNivpYAA.png",
+    date: "Aug 19, 2024",
+    tag: "Neural Networks",
   },
 ];
 
@@ -563,7 +571,7 @@ export default function Portfolio() {
               <h2 className="text-3xl font-black">On Medium</h2>
             </div>
             <a
-              href="https://medium.com/@zakariaebenzouitine"
+              href={MEDIUM_PROFILE}
               target="_blank"
               rel="noopener noreferrer"
               className="hidden sm:inline-flex items-center gap-2 text-xs text-slate-500 hover:text-slate-200 transition-colors border border-white/10 hover:border-white/20 px-4 py-2 rounded-lg"
@@ -596,7 +604,7 @@ export default function Portfolio() {
                     </p>
                     <div className="flex items-center gap-2 text-slate-600 text-[10px]">
                       <svg viewBox="0 0 24 24" fill="currentColor" className="w-3 h-3 text-slate-500"><path d="M13.54 12a6.8 6.8 0 01-6.77 6.82A6.8 6.8 0 010 12a6.8 6.8 0 016.77-6.82A6.8 6.8 0 0113.54 12zM20.96 12c0 3.54-1.51 6.42-3.38 6.42-1.87 0-3.39-2.88-3.39-6.42s1.52-6.42 3.39-6.42 3.38 2.88 3.38 6.42M24 12c0 3.17-.53 5.75-1.19 5.75-.66 0-1.19-2.58-1.19-5.75s.53-5.75 1.19-5.75C23.47 6.25 24 8.83 24 12z"/></svg>
-                      Medium · {a.readTime} read
+                      Medium · {a.date}
                     </div>
                   </div>
                 </a>
@@ -605,7 +613,7 @@ export default function Portfolio() {
           </div>
 
           <a
-            href="https://medium.com/@zakariaebenzouitine"
+            href={MEDIUM_PROFILE}
             target="_blank"
             rel="noopener noreferrer"
             className="sm:hidden mt-6 inline-flex items-center gap-2 text-xs text-slate-500 hover:text-slate-200 transition-colors"
