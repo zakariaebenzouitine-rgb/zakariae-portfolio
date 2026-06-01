@@ -57,14 +57,14 @@ const projects = [
     glow: "hover:shadow-violet-500/20",
   },
   {
-    title: "AI-Powered Presentation Builder",
+    title: "Multi-Agent AI System",
     description:
-      "A multi-agent pipeline that autonomously researches a topic, plans slide structure, and generates a complete presentation — each step verified by a dedicated agent.",
+      "A confidential multi-agent AI system built for a commercial product. Details are under NDA.",
     tags: ["AI Agents", "Gemini API", "LangGraph", "Multi-Agent", "Python"],
     github: null,
     current: true,
-    currentNote: "Inter-agent verification in progress",
-    nda: false,
+    currentNote: "In active development",
+    nda: true,
     gradient: "from-emerald-500 via-green-500 to-teal-500",
     glow: "hover:shadow-emerald-500/20",
   },
