@@ -45,58 +45,65 @@ const skills2 = [
 
 const projects = [
   {
-    title: "AI Lawyer Assistant — DecisiveAI",
+    title: "Production RAG Pipeline — DecisiveAI",
     description:
-      "Advanced RAG system built at DecisiveAI that enables lawyers to query and reason over complex legal documents with high accuracy and source traceability.",
-    tags: ["RAG", "LangChain", "LLMs", "Vector Search", "FastAPI"],
+      "Confidential commercial product. A fault-tolerant, resumable multi-block document processing pipeline: OCR via Mistral AI, LLM-powered classification and structured extraction using Gemini 2.5 Flash, query-answer pair generation with automatic anonymisation, and pair-quality scoring — all backed by Google Cloud Storage. Built with Python 3.12, Pydantic data models, and a Typer CLI that supports parallel workers and date-range sharding.",
+    tags: ["Gemini 2.5 Flash", "Mistral OCR", "GCS", "PyMuPDF", "Pydantic", "Python 3.12"],
     github: null,
     current: true,
+    nda: true,
     gradient: "from-violet-500 via-purple-500 to-fuchsia-500",
     glow: "hover:shadow-violet-500/20",
   },
   {
     title: "AI-Powered Presentation Builder",
     description:
-      "Multi-agent system where specialized agents collaborate end-to-end: a researcher gathers information on the topic, a verifier fact-checks every claim, a planner designs the slide structure using the Gemini API, and a builder agent generates and iteratively refines each slide — verifying content accuracy and layout until the presentation meets quality standards.",
+      "Multi-agent system where specialized agents collaborate end-to-end: a researcher gathers information, a verifier fact-checks every claim, a planner designs the slide structure using the Gemini API, and a builder agent generates and iteratively self-corrects each slide — verifying content accuracy and layout until quality standards are met.",
     tags: ["AI Agents", "Gemini API", "LangGraph", "Multi-Agent", "Python"],
     github: null,
     current: true,
+    nda: false,
     gradient: "from-emerald-500 via-green-500 to-teal-500",
     glow: "hover:shadow-emerald-500/20",
   },
   {
-    title: "XPLAIN — Explainable X-ray Report Generator",
+    title: "Medical Imaging Analysis System",
     description:
-      "Vision Transformer + LLM pipeline generating structured radiology reports with Grad-CAM heatmaps for visual explainability. Bridges medical imaging and language generation.",
-    tags: ["Vision Transformer", "Grad-CAM", "PyTorch", "Medical AI"],
-    github: "https://github.com/zakariaebenzouitine-rgb/xplain",
+      "Deep learning application for chest X-ray analysis using a dual-model approach: U-Net segments and highlights abnormal lung regions, while ResNet-50 classifies the image into possible chest pathologies. Served via a Flask web interface for real-time upload and inference.",
+    tags: ["U-Net", "ResNet-50", "TensorFlow/Keras", "OpenCV", "Flask"],
+    github: "https://github.com/zakariaebenzouitine-rgb/Medical-Image-Analysis-System-Development",
+    nda: false,
     gradient: "from-sky-500 via-cyan-500 to-teal-500",
     glow: "hover:shadow-cyan-500/20",
   },
   {
-    title: "Extreme Precipitation Clustering — Morocco",
+    title: "XPLAIN — Explainable X-ray Report Generator",
     description:
-      "Applied hierarchical clustering to segment Morocco into climatically coherent regions based on extreme precipitation events. Incorporated additional meteorological and geographical features to ensure regions reflect true climate complexity beyond rainfall alone.",
-    tags: ["Hierarchical Clustering", "Climate Data", "Scikit-learn", "Python", "GeoPandas"],
-    github: null,
-    gradient: "from-orange-500 via-amber-500 to-yellow-500",
-    glow: "hover:shadow-orange-500/20",
-  },
-  {
-    title: "Real-Time Sign Language Translation",
-    description:
-      "ML-powered real-time sign language recognition using MediaPipe hand landmark detection and Random Forest classification with an interactive Tkinter GUI.",
-    tags: ["MediaPipe", "OpenCV", "Random Forest", "Real-Time"],
-    github: "https://github.com/zakariaebenzouitine-rgb/Sign_language_system",
+      "Vision Transformer + LLM pipeline generating structured radiology reports with Grad-CAM heatmaps for visual explainability. Bridges medical imaging and language generation for interpretable AI in radiology.",
+    tags: ["Vision Transformer", "Grad-CAM", "PyTorch", "Medical AI"],
+    github: "https://github.com/zakariaebenzouitine-rgb/xplain",
+    nda: false,
     gradient: "from-pink-500 via-rose-500 to-red-500",
     glow: "hover:shadow-pink-500/20",
   },
   {
+    title: "Extreme Precipitation Clustering — Morocco",
+    description:
+      "Applied hierarchical clustering to segment Morocco into climatically coherent regions based on extreme precipitation events, enriched with additional meteorological and geographic features to capture climate complexity beyond rainfall patterns alone.",
+    tags: ["Hierarchical Clustering", "Climate Data", "Scikit-learn", "GeoPandas", "Python"],
+    github: null,
+    nda: false,
+    research: true,
+    gradient: "from-orange-500 via-amber-500 to-yellow-500",
+    glow: "hover:shadow-orange-500/20",
+  },
+  {
     title: "Machine Learning Notebooks",
     description:
-      "A hands-on learning collection covering core ML algorithms: Linear & Logistic Regression, Decision Trees, Ensemble Methods (Bagging, Random Forests, Boosting), and hyperparameter tuning with GridSearchCV. Built while studying ML fundamentals.",
+      "Hands-on study collection covering core ML algorithms: Linear & Logistic Regression, Decision Trees, Ensemble Methods (Bagging, Random Forests, Boosting), and hyperparameter tuning with GridSearchCV — built while learning ML fundamentals.",
     tags: ["Scikit-learn", "Python", "Jupyter", "Ensemble Methods"],
     github: "https://github.com/zakariaebenzouitine-rgb/Machinelearning_notebooks",
+    nda: false,
     gradient: "from-indigo-500 via-blue-500 to-sky-500",
     glow: "hover:shadow-indigo-500/20",
   },
@@ -185,6 +192,47 @@ const education = [
     sub: "Faculty of Science · UM5 · Rabat, Morocco",
     period: "2022 – 2023",
     accent: "#10B981",
+  },
+];
+
+// ─── Medium articles ──────────────────────────────────────────────────────────
+// TODO: replace with your real article data (title, url, cover image, read time)
+
+const articles = [
+  {
+    title: "Building Explainable AI for Medical Imaging with Grad-CAM",
+    url: "https://medium.com/@zakariaebenzouitine",
+    cover: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=600&h=340&fit=crop",
+    readTime: "7 min",
+    tag: "Computer Vision",
+  },
+  {
+    title: "RAG Systems in Production: What Nobody Tells You",
+    url: "https://medium.com/@zakariaebenzouitine",
+    cover: "https://images.unsplash.com/photo-1677442135703-1787eea5ce01?w=600&h=340&fit=crop",
+    readTime: "9 min",
+    tag: "RAG",
+  },
+  {
+    title: "LangGraph vs CrewAI: Choosing the Right Agent Framework",
+    url: "https://medium.com/@zakariaebenzouitine",
+    cover: "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?w=600&h=340&fit=crop",
+    readTime: "6 min",
+    tag: "AI Agents",
+  },
+  {
+    title: "Fine-tuning LLMs with QLoRA: A Practical Walkthrough",
+    url: "https://medium.com/@zakariaebenzouitine",
+    cover: "https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?w=600&h=340&fit=crop",
+    readTime: "11 min",
+    tag: "LLMs",
+  },
+  {
+    title: "Hierarchical Clustering for Climate Data: Morocco Case Study",
+    url: "https://medium.com/@zakariaebenzouitine",
+    cover: "https://images.unsplash.com/photo-1534088568595-a066f410bcda?w=600&h=340&fit=crop",
+    readTime: "8 min",
+    tag: "Data Science",
   },
 ];
 
@@ -464,9 +512,9 @@ export default function Portfolio() {
                   <div className="flex items-start justify-between gap-2 mb-3">
                     <h3 className="font-bold text-white text-base leading-snug">{p.title}</h3>
                     {p.current && (
-                      <span className="flex-shrink-0 inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-[10px] font-semibold bg-violet-500/15 border border-violet-500/30 text-violet-300">
-                        <span className="w-1.5 h-1.5 rounded-full bg-violet-400 animate-pulse" />
-                        Live
+                      <span className="flex-shrink-0 inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-[10px] font-semibold bg-emerald-500/15 border border-emerald-500/30 text-emerald-300">
+                        <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
+                        Shipping Soon
                       </span>
                     )}
                   </div>
@@ -487,19 +535,82 @@ export default function Portfolio() {
                       View on GitHub
                       <ExternalLink size={11} />
                     </a>
-                  ) : p.current ? (
-                    <span className="inline-flex items-center gap-1.5 text-xs text-slate-600 italic">
-                      Current work · private repository
+                  ) : p.nda ? (
+                    <span className="inline-flex items-center gap-1.5 text-xs px-2.5 py-1 rounded-md bg-amber-500/8 border border-amber-500/20 text-amber-400/70">
+                      <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+                      Proprietary · NDA
                     </span>
-                  ) : (
-                    <span className="inline-flex items-center gap-1.5 text-xs text-slate-600 italic">
-                      No public repository
+                  ) : p.research ? (
+                    <span className="inline-flex items-center gap-1.5 text-xs px-2.5 py-1 rounded-md bg-sky-500/8 border border-sky-500/20 text-sky-400/70">
+                      <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+                      Research project · no public repo
                     </span>
-                  )}
+                  ) : null}
                 </div>
               </div>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* ── Writing strip ───────────────────────────────────────── */}
+      <section className="relative z-10 py-20 px-6">
+        <div className="max-w-5xl mx-auto">
+          <div className="flex items-center justify-between mb-10">
+            <div>
+              <Label>Writing</Label>
+              <h2 className="text-3xl font-black">On Medium</h2>
+            </div>
+            <a
+              href="https://medium.com/@zakariaebenzouitine"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hidden sm:inline-flex items-center gap-2 text-xs text-slate-500 hover:text-slate-200 transition-colors border border-white/10 hover:border-white/20 px-4 py-2 rounded-lg"
+            >
+              All articles
+              <ExternalLink size={12} />
+            </a>
+          </div>
+
+          <div className="overflow-x-auto scrollbar-hide -mx-6 px-6">
+            <div className="flex gap-4" style={{width: 'max-content'}}>
+              {articles.map((a, i) => (
+                <a
+                  key={i}
+                  href={a.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group flex-shrink-0 w-64 rounded-xl overflow-hidden glass-card hover:border-white/20 hover:-translate-y-1 transition-all duration-200"
+                >
+                  <div className="relative h-32 overflow-hidden">
+                    <img src={a.cover} alt={a.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
+                    <span className="absolute bottom-2 left-3 text-[10px] font-semibold text-white/80 bg-white/10 backdrop-blur-sm px-2 py-0.5 rounded-full border border-white/10">
+                      {a.tag}
+                    </span>
+                  </div>
+                  <div className="p-4">
+                    <p className="text-white text-xs font-semibold leading-snug mb-2 line-clamp-2 group-hover:text-violet-300 transition-colors">
+                      {a.title}
+                    </p>
+                    <div className="flex items-center gap-2 text-slate-600 text-[10px]">
+                      <svg viewBox="0 0 24 24" fill="currentColor" className="w-3 h-3 text-slate-500"><path d="M13.54 12a6.8 6.8 0 01-6.77 6.82A6.8 6.8 0 010 12a6.8 6.8 0 016.77-6.82A6.8 6.8 0 0113.54 12zM20.96 12c0 3.54-1.51 6.42-3.38 6.42-1.87 0-3.39-2.88-3.39-6.42s1.52-6.42 3.39-6.42 3.38 2.88 3.38 6.42M24 12c0 3.17-.53 5.75-1.19 5.75-.66 0-1.19-2.58-1.19-5.75s.53-5.75 1.19-5.75C23.47 6.25 24 8.83 24 12z"/></svg>
+                      Medium · {a.readTime} read
+                    </div>
+                  </div>
+                </a>
+              ))}
+            </div>
+          </div>
+
+          <a
+            href="https://medium.com/@zakariaebenzouitine"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="sm:hidden mt-6 inline-flex items-center gap-2 text-xs text-slate-500 hover:text-slate-200 transition-colors"
+          >
+            All articles <ExternalLink size={12} />
+          </a>
         </div>
       </section>
 
@@ -766,6 +877,11 @@ export default function Portfolio() {
           z-index: 10;
         }
         .fade-left  { left:  0; background: linear-gradient(to right,  #07070F, transparent); }
+        /* hide scrollbar for article strip */
+        .scrollbar-hide::-webkit-scrollbar { display: none; }
+        .scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }
+        /* line clamp */
+        .line-clamp-2 { display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
         .fade-right { right: 0; background: linear-gradient(to left,   #07070F, transparent); }
 
         /* Skill chip hover */
