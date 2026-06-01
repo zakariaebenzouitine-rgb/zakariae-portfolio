@@ -416,70 +416,43 @@ export default function Portfolio() {
           <div className="grid md:grid-cols-5 gap-10 items-start">
 
             {/* bio */}
-            <div className="md:col-span-3 space-y-6">
+            <div className="md:col-span-3 space-y-5">
 
-              {/* Hook — above the fold, highest contrast */}
+              {/* Hook */}
               <p className="text-slate-100 text-lg md:text-xl leading-relaxed font-medium">
-                I build AI systems that answer real questions on real data — and ship them into production.
-                Currently at <span className="text-violet-400 font-semibold">DecisiveAI</span> as a Generative AI Engineer,
-                designing <span className="text-cyan-400 font-semibold">RAG pipelines</span> and{" "}
-                <span className="text-cyan-400 font-semibold">multi-agent architectures</span> that hold up when documents get messy,
-                queries get ambiguous, and edge cases get real.
+                Generative AI Engineer at <span className="text-violet-400 font-semibold">DecisiveAI</span>, building
+                production <span className="text-cyan-400 font-semibold">RAG systems</span> and{" "}
+                <span className="text-cyan-400 font-semibold">multi-agent pipelines</span> that hold up on real, messy data.
               </p>
 
-              {/* Proof — narrative with measurable outcomes */}
+              {/* Proof — short, focused */}
               <p className="text-slate-400 text-base leading-relaxed">
-                My foundation is a <span className="text-slate-200 font-medium">Master's in Computer Science</span> (UM5, Rabat),
-                four engineering internships across AI research, NLP, and computer vision, and research at the{" "}
-                <span className="text-slate-200 font-medium">College of Computing, UM6P</span> — where I co-authored a survey on AI for climate
-                resilience and ran hierarchical clustering on Morocco's extreme precipitation events on the{" "}
-                <span className="text-slate-200 font-medium">Toubkal supercomputer</span>. On the applied side: explainable radiology report
-                generation with Vision Transformers + Grad-CAM,{" "}
-                <span className="text-slate-200 font-medium">85%+ accuracy</span> CNN-based emotion recognition with ResNet50 transfer
-                learning, and an LLM quiz platform deployed on{" "}
-                <span className="text-slate-200 font-medium">AWS SageMaker</span>.
+                Master's in Computer Science (UM5, Rabat) · 4 engineering internships · AI research at{" "}
+                <span className="text-slate-300 font-medium">College of Computing, UM6P</span>.
+                I've shipped explainable medical imaging systems, LLM platforms on AWS SageMaker, and
+                climate regionalization research on the Toubkal supercomputer.
               </p>
 
-              {/* Why this work */}
-              <p className="text-slate-400 text-base leading-relaxed">
-                I gravitate toward high-stakes domains —{" "}
-                <span className="text-violet-400 font-medium">medical imaging, legal tech, climate science</span> — where a wrong output
-                has real consequences. That constraint is what makes the engineering interesting.
+              {/* Why */}
+              <p className="text-slate-500 text-sm leading-relaxed italic">
+                "I build for domains where accuracy isn't optional — the harder the problem, the more interesting the engineering."
               </p>
 
-              {/* Competencies — scannable keyword-rich list */}
-              <div className="pt-1">
-                <p className="text-xs uppercase tracking-widest text-slate-600 font-semibold mb-3">Core Stack</p>
-                <div className="flex flex-wrap gap-2">
-                  {[
-                    "Python", "LangChain", "LangGraph", "Gemini API", "Mistral AI",
-                    "RAG Systems", "AI Agents", "LLM Fine-tuning", "QLoRA / PEFT",
-                    "PyTorch", "FastAPI", "Docker", "Google Cloud", "Pydantic",
-                  ].map(skill => (
-                    <span key={skill} className="text-xs px-2.5 py-1 rounded-md bg-white/4 border border-white/8 text-slate-400">
-                      {skill}
-                    </span>
-                  ))}
-                </div>
-              </div>
-
-              {/* CTA */}
-              <div className="pt-1 flex flex-wrap items-center gap-4">
+              {/* CTA + socials */}
+              <div className="flex flex-wrap items-center gap-3 pt-1">
                 <a
                   href="mailto:zakariaebenzouitine@gmail.com"
                   className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-violet-600/20 border border-violet-500/30 text-violet-300 text-sm font-medium hover:bg-violet-600/30 transition-colors"
                 >
                   <Mail size={14} />
-                  Open to full-time GenAI roles — let's talk
+                  Open to GenAI roles
                 </a>
-                <div className="flex items-center gap-3">
-                  <a href="https://github.com/zakariaebenzouitine-rgb" target="_blank" rel="noopener noreferrer" className="social-link">
-                    <Github size={15} /> GitHub
-                  </a>
-                  <a href="https://www.linkedin.com/in/zakariaebenzouitine/" target="_blank" rel="noopener noreferrer" className="social-link">
-                    <Linkedin size={15} /> LinkedIn
-                  </a>
-                </div>
+                <a href="https://github.com/zakariaebenzouitine-rgb" target="_blank" rel="noopener noreferrer" className="social-link">
+                  <Github size={15} /> GitHub
+                </a>
+                <a href="https://www.linkedin.com/in/zakariaebenzouitine/" target="_blank" rel="noopener noreferrer" className="social-link">
+                  <Linkedin size={15} /> LinkedIn
+                </a>
               </div>
             </div>
 
@@ -488,7 +461,7 @@ export default function Portfolio() {
               <div className="relative">
                 <div className="absolute -inset-1 rounded-2xl bg-gradient-to-br from-violet-500/40 to-cyan-500/40 blur-xl" />
                 <img
-                  src="/profile_picture.jpg"
+                  src="/profile_linkedin.jpeg"
                   alt="Zakariae Benzouitine"
                   className="relative w-44 h-44 md:w-52 md:h-52 rounded-2xl object-cover border border-white/10"
                 />
