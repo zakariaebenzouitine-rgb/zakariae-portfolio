@@ -477,32 +477,34 @@ export default function Portfolio() {
       <section id="skills" className="relative z-10 py-20">
         <div className="max-w-5xl mx-auto px-6 mb-12">
           <Label>Skills</Label>
-          <h2 className="text-4xl md:text-5xl font-black">2026 GenAI Stack</h2>
+          <h2 className="text-4xl md:text-5xl font-black">What I Work With</h2>
           <p className="text-slate-500 mt-3 text-sm max-w-lg">
-            The skills every recruiter searches for in 2026 — from RAG pipelines to fine-tuned LLMs and autonomous agents.
+            From RAG pipelines and LLM fine-tuning to autonomous agents and cloud deployment.
           </p>
         </div>
 
-        {/* Row 1 — scrolls LEFT */}
-        <div className="marquee-track mb-4">
-          <div className="marquee-inner marquee-left">
-            {[...skills1, ...skills1, ...skills1].map((s, i) => (
-              <SkillChip key={i} label={s.label} icon={s.icon} variant="violet" />
-            ))}
+        <div className="max-w-5xl mx-auto px-6">
+          {/* Row 1 — scrolls LEFT */}
+          <div className="marquee-track mb-4 rounded-xl overflow-hidden">
+            <div className="marquee-inner marquee-left">
+              {[...skills1, ...skills1, ...skills1].map((s, i) => (
+                <SkillChip key={i} label={s.label} icon={s.icon} variant="violet" />
+              ))}
+            </div>
+            <div className="fade-left" />
+            <div className="fade-right" />
           </div>
-          <div className="fade-left" />
-          <div className="fade-right" />
-        </div>
 
-        {/* Row 2 — scrolls RIGHT */}
-        <div className="marquee-track">
-          <div className="marquee-inner marquee-right">
-            {[...skills2, ...skills2, ...skills2].map((s, i) => (
-              <SkillChip key={i} label={s.label} icon={s.icon} variant="cyan" />
-            ))}
+          {/* Row 2 — scrolls RIGHT */}
+          <div className="marquee-track rounded-xl overflow-hidden">
+            <div className="marquee-inner marquee-right">
+              {[...skills2, ...skills2, ...skills2].map((s, i) => (
+                <SkillChip key={i} label={s.label} icon={s.icon} variant="cyan" />
+              ))}
+            </div>
+            <div className="fade-left" />
+            <div className="fade-right" />
           </div>
-          <div className="fade-left" />
-          <div className="fade-right" />
         </div>
       </section>
 
