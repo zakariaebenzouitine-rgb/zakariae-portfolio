@@ -413,8 +413,8 @@ export default function Portfolio() {
           <Label>About Me</Label>
           <h2 className="text-4xl md:text-5xl font-black mb-14">Who I Am</h2>
 
-          {/* top row: bio + photo, both top-aligned */}
-          <div className="grid md:grid-cols-5 gap-10 items-start">
+          {/* top row: bio centered against photo height */}
+          <div className="grid md:grid-cols-5 gap-10 items-center">
 
             {/* bio */}
             <div className="md:col-span-3 space-y-5">
