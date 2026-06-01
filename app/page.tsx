@@ -47,7 +47,7 @@ const projects = [
   {
     title: "Production RAG Pipeline",
     description:
-      "Confidential commercial product. A fault-tolerant, resumable multi-block document processing pipeline: OCR via Mistral AI, LLM-powered classification and structured extraction with Gemini 2.5 Flash, query-answer pair generation with automatic anonymisation, and pair-quality scoring — all backed by Google Cloud Storage. Built with Python 3.12, Pydantic, and a Typer CLI supporting parallel workers and date-range sharding.",
+      "A confidential RAG system built for a commercial product. Details are under NDA.",
     tags: ["Gemini 2.5 Flash", "Mistral OCR", "GCS", "PyMuPDF", "Pydantic", "Python 3.12"],
     github: null,
     current: true,
@@ -59,11 +59,11 @@ const projects = [
   {
     title: "AI-Powered Presentation Builder",
     description:
-      "Multi-agent system where specialized agents collaborate end-to-end: a researcher gathers information on the topic, a planner designs the slide structure via the Gemini API, and a builder agent generates each slide then iteratively self-corrects layout until quality standards are met.",
+      "A multi-agent pipeline that autonomously researches a topic, plans slide structure, and generates a complete presentation — each step verified by a dedicated agent.",
     tags: ["AI Agents", "Gemini API", "LangGraph", "Multi-Agent", "Python"],
     github: null,
     current: true,
-    currentNote: "Inter-agent verification layer in progress",
+    currentNote: "Inter-agent verification in progress",
     nda: false,
     gradient: "from-emerald-500 via-green-500 to-teal-500",
     glow: "hover:shadow-emerald-500/20",
@@ -516,9 +516,9 @@ export default function Portfolio() {
                     <h3 className="font-bold text-white text-base leading-snug">{p.title}</h3>
                     {p.current && (
                       <div className="flex flex-col items-end gap-1 flex-shrink-0">
-                        <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-[10px] font-semibold bg-emerald-500/15 border border-emerald-500/30 text-emerald-300">
-                          <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
-                          Shipping Soon
+                        <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-[10px] font-semibold bg-amber-500/15 border border-amber-500/30 text-amber-300">
+                          <span className="w-1.5 h-1.5 rounded-full bg-amber-400 animate-pulse" />
+                          In Progress
                         </span>
                         {p.currentNote && (
                           <span className="text-[10px] text-slate-500 italic text-right">{p.currentNote}</span>
