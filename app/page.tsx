@@ -120,8 +120,8 @@ const experience = [
     period: "2025 – Present",
     location: "Morocco",
     points: [
-      "Building an advanced RAG system powering an AI Lawyer Assistant for legal document reasoning",
-      "Developing a multi-agent AI pipeline that autonomously researches, verifies, and generates presentations using the Gemini API",
+      "Building production-grade AI systems involving RAG pipelines, LLM orchestration, and multi-agent architectures",
+      "Working on proprietary commercial products — details under NDA",
     ],
     accent: "#7C3AED",
   },
@@ -179,7 +179,7 @@ const education = [
   {
     degree: "Le Wagon Data Science Bootcamp",
     sub: "Intensive 9-week program · Casablanca, Morocco",
-    period: "Aug 2025 – Oct 2025",
+    period: "",
     accent: "#7C3AED",
   },
   {
