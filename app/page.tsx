@@ -117,7 +117,7 @@ const experience = [
     role: "Generative AI Engineer",
     type: "Current",
     company: "DecisiveAI",
-    period: "2025 – Present",
+    period: "Present",
     location: "Morocco",
     points: [
       "Building production-grade AI systems involving RAG pipelines, LLM orchestration, and multi-agent architectures",
@@ -129,7 +129,7 @@ const experience = [
     role: "AI Researcher",
     type: "Internship",
     company: "College of Computing · UM6P",
-    period: "Apr 2025 – Sep 2025",
+    period: "6 months",
     location: "Ben Guerir, Morocco",
     points: [
       "Authored survey paper on AI applications for climate resilience in Morocco",
@@ -141,7 +141,7 @@ const experience = [
     role: "Data Scientist",
     type: "Internship",
     company: "Intelcap Sarl",
-    period: "Aug 2024 – Nov 2024",
+    period: "4 months",
     location: "Rabat, Morocco",
     points: [
       "Built CNN facial emotion recognition model — 85%+ accuracy with ResNet50 transfer learning",
@@ -153,7 +153,7 @@ const experience = [
     role: "ML / DL Engineer",
     type: "Internship",
     company: "LIMIARF Research Lab",
-    period: "May 2024 – Sep 2024",
+    period: "5 months",
     location: "Rabat, Morocco",
     points: [
       "Built Qwaze — AI quiz generation platform using LLAMA 2 LLM on Amazon SageMaker",
@@ -165,7 +165,7 @@ const experience = [
     role: "AI Developer",
     type: "Internship",
     company: "Province Sidi Kacem",
-    period: "Apr 2023 – Jun 2023",
+    period: "3 months",
     location: "Sidi Kacem, Morocco",
     points: [
       "Built document classification model with Scikit-learn and PyPDF2",
