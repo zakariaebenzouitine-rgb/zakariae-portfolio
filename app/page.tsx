@@ -354,6 +354,11 @@ export default function Portfolio() {
       {/* ── Hero ────────────────────────────────────────────────── */}
       <section id="home" className="relative z-10 min-h-screen flex flex-col items-center justify-center px-6 pt-16 text-center">
 
+        <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-white/10 bg-white/4 text-slate-400 text-xs font-medium mb-10 backdrop-blur-sm">
+          <span className="w-1.5 h-1.5 rounded-full bg-violet-400 animate-pulse" />
+          Generative AI Engineer &nbsp;·&nbsp; Currently @ DecisiveAI
+        </div>
+
         <h1 className="font-black tracking-tight leading-none mb-6">
           <span className="block text-slate-100 text-5xl md:text-7xl lg:text-8xl">Zakariae</span>
           <span className="block hero-name text-5xl md:text-7xl lg:text-8xl">Benzouitine</span>
