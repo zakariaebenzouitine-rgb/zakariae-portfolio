@@ -413,34 +413,73 @@ export default function Portfolio() {
           <Label>About Me</Label>
           <h2 className="text-4xl md:text-5xl font-black mb-14">Who I Am</h2>
 
-          <div className="grid md:grid-cols-5 gap-10 items-center">
+          <div className="grid md:grid-cols-5 gap-10 items-start">
 
             {/* bio */}
-            <div className="md:col-span-3 space-y-5 text-slate-400 text-base md:text-lg leading-relaxed">
-              <p>
-                I'm a <span className="text-slate-100 font-semibold">Generative AI Engineer</span> with a Master's in Computer Science,
-                building production-grade AI systems — <span className="text-violet-400 font-semibold">RAG pipelines</span>,
-                <span className="text-cyan-400 font-semibold"> autonomous agents</span>, and fine-tuned LLMs that solve real domain problems.
-              </p>
-              <p>
-                Currently completing an intensive <span className="text-slate-100 font-semibold">Le Wagon Data Science Bootcamp</span> in Casablanca.
-                I combine deep ML foundations (PyTorch, CNNs, transformers) with modern GenAI tooling — LangChain, LangGraph, HuggingFace PEFT, and cloud-native deployment.
-              </p>
-              <p>
-                My work spans <span className="text-violet-400 font-semibold">medical AI, climate modeling, and real-time computer vision</span>.
-                I care about AI that is not just powerful — but <em>interpretable, reliable, and production-ready</em>.
+            <div className="md:col-span-3 space-y-6">
+
+              {/* Hook — above the fold, highest contrast */}
+              <p className="text-slate-100 text-lg md:text-xl leading-relaxed font-medium">
+                I build AI systems that answer real questions on real data — and ship them into production.
+                Currently at <span className="text-violet-400 font-semibold">DecisiveAI</span> as a Generative AI Engineer,
+                designing <span className="text-cyan-400 font-semibold">RAG pipelines</span> and{" "}
+                <span className="text-cyan-400 font-semibold">multi-agent architectures</span> that hold up when documents get messy,
+                queries get ambiguous, and edge cases get real.
               </p>
 
-              <div className="flex flex-wrap gap-3 pt-2">
-                <a href="mailto:zakariaebenzouitine@gmail.com" className="social-link">
-                  <Mail size={15} /> zakariaebenzouitine@gmail.com
+              {/* Proof — narrative with measurable outcomes */}
+              <p className="text-slate-400 text-base leading-relaxed">
+                My foundation is a <span className="text-slate-200 font-medium">Master's in Computer Science</span> (UM5, Rabat),
+                four engineering internships across AI research, NLP, and computer vision, and research at the{" "}
+                <span className="text-slate-200 font-medium">College of Computing, UM6P</span> — where I co-authored a survey on AI for climate
+                resilience and ran hierarchical clustering on Morocco's extreme precipitation events on the{" "}
+                <span className="text-slate-200 font-medium">Toubkal supercomputer</span>. On the applied side: explainable radiology report
+                generation with Vision Transformers + Grad-CAM,{" "}
+                <span className="text-slate-200 font-medium">85%+ accuracy</span> CNN-based emotion recognition with ResNet50 transfer
+                learning, and an LLM quiz platform deployed on{" "}
+                <span className="text-slate-200 font-medium">AWS SageMaker</span>.
+              </p>
+
+              {/* Why this work */}
+              <p className="text-slate-400 text-base leading-relaxed">
+                I gravitate toward high-stakes domains —{" "}
+                <span className="text-violet-400 font-medium">medical imaging, legal tech, climate science</span> — where a wrong output
+                has real consequences. That constraint is what makes the engineering interesting.
+              </p>
+
+              {/* Competencies — scannable keyword-rich list */}
+              <div className="pt-1">
+                <p className="text-xs uppercase tracking-widest text-slate-600 font-semibold mb-3">Core Stack</p>
+                <div className="flex flex-wrap gap-2">
+                  {[
+                    "Python", "LangChain", "LangGraph", "Gemini API", "Mistral AI",
+                    "RAG Systems", "AI Agents", "LLM Fine-tuning", "QLoRA / PEFT",
+                    "PyTorch", "FastAPI", "Docker", "Google Cloud", "Pydantic",
+                  ].map(skill => (
+                    <span key={skill} className="text-xs px-2.5 py-1 rounded-md bg-white/4 border border-white/8 text-slate-400">
+                      {skill}
+                    </span>
+                  ))}
+                </div>
+              </div>
+
+              {/* CTA */}
+              <div className="pt-1 flex flex-wrap items-center gap-4">
+                <a
+                  href="mailto:zakariaebenzouitine@gmail.com"
+                  className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-violet-600/20 border border-violet-500/30 text-violet-300 text-sm font-medium hover:bg-violet-600/30 transition-colors"
+                >
+                  <Mail size={14} />
+                  Open to full-time GenAI roles — let's talk
                 </a>
-                <a href="https://github.com/zakariaebenzouitine-rgb" target="_blank" rel="noopener noreferrer" className="social-link">
-                  <Github size={15} /> GitHub
-                </a>
-                <a href="https://www.linkedin.com/in/zakariaebenzouitine/" target="_blank" rel="noopener noreferrer" className="social-link">
-                  <Linkedin size={15} /> LinkedIn
-                </a>
+                <div className="flex items-center gap-3">
+                  <a href="https://github.com/zakariaebenzouitine-rgb" target="_blank" rel="noopener noreferrer" className="social-link">
+                    <Github size={15} /> GitHub
+                  </a>
+                  <a href="https://www.linkedin.com/in/zakariaebenzouitine/" target="_blank" rel="noopener noreferrer" className="social-link">
+                    <Linkedin size={15} /> LinkedIn
+                  </a>
+                </div>
               </div>
             </div>
 
