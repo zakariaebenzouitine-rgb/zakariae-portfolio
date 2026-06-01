@@ -413,51 +413,29 @@ export default function Portfolio() {
           <Label>About Me</Label>
           <h2 className="text-4xl md:text-5xl font-black mb-14">Who I Am</h2>
 
-          <div className="grid md:grid-cols-5 gap-10 items-center">
+          {/* top row: bio + photo, both top-aligned */}
+          <div className="grid md:grid-cols-5 gap-10 items-start">
 
             {/* bio */}
             <div className="md:col-span-3 space-y-5">
-
-              {/* Hook */}
               <p className="text-slate-100 text-lg md:text-xl leading-relaxed font-medium">
                 Generative AI Engineer at <span className="text-violet-400 font-semibold">DecisiveAI</span>, building
                 production <span className="text-cyan-400 font-semibold">RAG systems</span> and{" "}
                 <span className="text-cyan-400 font-semibold">multi-agent pipelines</span> that hold up on real, messy data.
               </p>
-
-              {/* Proof — short, focused */}
               <p className="text-slate-400 text-base leading-relaxed">
                 Master's in Computer Science (UM5, Rabat) · 4 engineering internships · AI research at{" "}
                 <span className="text-slate-300 font-medium">College of Computing, UM6P</span>.
                 I've shipped explainable medical imaging systems, LLM platforms on AWS SageMaker, and
                 climate regionalization research on the Toubkal supercomputer.
               </p>
-
-              {/* Why */}
               <p className="text-slate-500 text-sm leading-relaxed italic">
                 "I build for domains where accuracy isn't optional — the harder the problem, the more interesting the engineering."
               </p>
-
-              {/* CTA + socials */}
-              <div className="flex flex-wrap items-center gap-3 pt-1">
-                <a
-                  href="mailto:zakariaebenzouitine@gmail.com"
-                  className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-violet-600/20 border border-violet-500/30 text-violet-300 text-sm font-medium hover:bg-violet-600/30 transition-colors"
-                >
-                  <Mail size={14} />
-                  Open to GenAI roles
-                </a>
-                <a href="https://github.com/zakariaebenzouitine-rgb" target="_blank" rel="noopener noreferrer" className="social-link">
-                  <Github size={15} /> GitHub
-                </a>
-                <a href="https://www.linkedin.com/in/zakariaebenzouitine/" target="_blank" rel="noopener noreferrer" className="social-link">
-                  <Linkedin size={15} /> LinkedIn
-                </a>
-              </div>
             </div>
 
-            {/* stats + photo */}
-            <div className="md:col-span-2 flex flex-col items-center gap-6">
+            {/* photo only */}
+            <div className="md:col-span-2">
               <div className="relative w-full">
                 <div className="absolute -inset-2 rounded-2xl bg-gradient-to-br from-violet-500/40 to-cyan-500/40 blur-xl" />
                 <img
@@ -466,21 +444,22 @@ export default function Portfolio() {
                   className="relative w-full h-80 md:h-96 rounded-2xl object-cover object-top border border-white/10"
                 />
               </div>
-
-              <div className="grid grid-cols-2 gap-3 w-full">
-                {[
-                  { n: "4+",  l: "Internships" },
-                  { n: "6+",  l: "AI Projects" },
-                  { n: "2+",  l: "Years in ML" },
-                  { n: "∞",   l: "Curiosity" },
-                ].map(({ n, l }) => (
-                  <div key={l} className="glass-card p-4 text-center rounded-xl">
-                    <div className="text-2xl font-black bg-gradient-to-r from-violet-400 to-cyan-400 bg-clip-text text-transparent">{n}</div>
-                    <div className="text-slate-500 text-xs mt-0.5">{l}</div>
-                  </div>
-                ))}
-              </div>
             </div>
+          </div>
+
+          {/* stats row — horizontal, full width, below both columns */}
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-10">
+            {[
+              { n: "4+", l: "Internships" },
+              { n: "6+", l: "AI Projects" },
+              { n: "2+", l: "Years in ML" },
+              { n: "∞",  l: "Curiosity" },
+            ].map(({ n, l }) => (
+              <div key={l} className="glass-card p-4 text-center rounded-xl">
+                <div className="text-2xl font-black bg-gradient-to-r from-violet-400 to-cyan-400 bg-clip-text text-transparent">{n}</div>
+                <div className="text-slate-500 text-xs mt-0.5">{l}</div>
+              </div>
+            ))}
           </div>
         </div>
       </section>
