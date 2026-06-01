@@ -354,11 +354,6 @@ export default function Portfolio() {
       {/* ── Hero ────────────────────────────────────────────────── */}
       <section id="home" className="relative z-10 min-h-screen flex flex-col items-center justify-center px-6 pt-16 text-center">
 
-        <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-violet-500/25 bg-violet-500/8 text-violet-300 text-xs font-medium mb-10 backdrop-blur-sm">
-          <span className="w-1.5 h-1.5 rounded-full bg-violet-400 animate-pulse" />
-          Open to full-time opportunities · 2026
-        </div>
-
         <h1 className="font-black tracking-tight leading-none mb-6">
           <span className="block text-slate-100 text-5xl md:text-7xl lg:text-8xl">Zakariae</span>
           <span className="block hero-name text-5xl md:text-7xl lg:text-8xl">Benzouitine</span>
@@ -385,14 +380,13 @@ export default function Portfolio() {
         </p>
 
         <div className="flex flex-col sm:flex-row gap-3 justify-center">
-          <a
-            href="/Benzouitine_resume.pdf"
-            download="Zakariae_Benzouitine_CV.pdf"
+          <button
+            onClick={() => go('contact')}
             className="px-7 py-3.5 rounded-xl font-semibold text-sm cta-primary flex items-center justify-center gap-2"
           >
-            <Download size={16} />
-            Download CV
-          </a>
+            <Mail size={16} />
+            Let's Talk
+          </button>
           <button
             onClick={() => go('projects')}
             className="px-7 py-3.5 rounded-xl font-semibold text-sm bg-white/5 hover:bg-white/10 border border-white/10 hover:border-white/20 transition-all flex items-center justify-center gap-2"
