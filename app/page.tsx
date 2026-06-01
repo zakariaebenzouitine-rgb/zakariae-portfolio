@@ -316,12 +316,13 @@ export default function Portfolio() {
               </button>
             ))}
             <a
-              href="/Benzouitine_resume.pdf"
-              download="Zakariae_Benzouitine_CV.pdf"
+              href="https://www.linkedin.com/in/zakariaebenzouitine/"
+              target="_blank"
+              rel="noopener noreferrer"
               className="ml-2 px-4 py-2 rounded-lg bg-violet-600 hover:bg-violet-500 transition-colors text-sm font-semibold flex items-center gap-1.5 shadow-lg shadow-violet-500/20"
             >
-              <Download size={13} />
-              Resume
+              <Linkedin size={13} />
+              Let's Connect
             </a>
           </div>
 
@@ -340,12 +341,13 @@ export default function Portfolio() {
               </button>
             ))}
             <a
-              href="/Benzouitine_resume.pdf"
-              download
+              href="https://www.linkedin.com/in/zakariaebenzouitine/"
+              target="_blank"
+              rel="noopener noreferrer"
               className="self-start px-4 py-2 rounded-lg bg-violet-600 hover:bg-violet-500 text-sm font-semibold flex items-center gap-1.5"
             >
-              <Download size={13} />
-              Resume
+              <Linkedin size={13} />
+              Let's Connect
             </a>
           </div>
         )}
@@ -356,7 +358,7 @@ export default function Portfolio() {
 
         <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-white/10 bg-white/4 text-slate-400 text-xs font-medium mb-10 backdrop-blur-sm">
           <span className="w-1.5 h-1.5 rounded-full bg-violet-400 animate-pulse" />
-          Generative AI Engineer &nbsp;·&nbsp; Currently @ DecisiveAI
+          AI / Data Engineer &nbsp;·&nbsp; Currently @ DecisiveAI
         </div>
 
         <h1 className="font-black tracking-tight leading-none mb-6">
@@ -393,10 +395,10 @@ export default function Portfolio() {
             Let's Talk
           </button>
           <button
-            onClick={() => go('projects')}
+            onClick={() => go('about')}
             className="px-7 py-3.5 rounded-xl font-semibold text-sm bg-white/5 hover:bg-white/10 border border-white/10 hover:border-white/20 transition-all flex items-center justify-center gap-2"
           >
-            View Projects
+            About Me
             <ArrowRight size={16} />
           </button>
         </div>
